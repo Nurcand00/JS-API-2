@@ -4,7 +4,7 @@ const fetchUsersDetails = async () => {
     
     // Eğer postId yoksa prompt ile kullanıcıdan iste
     if (!postId) {
-        postId = prompt("Lütfen bir gönderi ID'si girin (1-100 arasında bir sayı):");
+        postId = prompt("Lütfen bir gönderi ID'si girin (1-10 arasında bir sayı):");
 
         // Girilen ID'nin geçerli olup olmadığını kontrol et
         if (!postId || isNaN(postId) || postId < 1 || postId > 10) {
@@ -30,8 +30,6 @@ const fetchUsersDetails = async () => {
               </div>
              </div>`;
 
-
-
              
     } catch (error) {
         console.error("Karakterler yüklenemedi: ", error);
@@ -39,8 +37,6 @@ const fetchUsersDetails = async () => {
         `<div class="alert alert-danger" role="alert">Karakter detayları getirilirken hata oluştu.</div>`
     }
 
-    
-   
 
 };
 fetchUsersDetails();
